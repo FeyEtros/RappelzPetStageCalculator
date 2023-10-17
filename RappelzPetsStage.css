@@ -1,0 +1,124 @@
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(360deg, var(--bg) 85%, var(--fg));
+    color: white;
+    height: 100%;
+    margin: auto;
+    display: grid;
+    justify-items: center;
+    
+}
+
+h1 {
+    font-size: 150%;
+}
+
+h4 {
+text-align: center;
+position: relative;
+left: 10%;
+}
+
+
+img {
+    position: relative;
+    top: 1em;
+}
+
+fieldset {
+    border: none;
+    position: relative; 
+    
+}
+
+
+form {
+    display: grid;
+    gap: 0.6em;
+    width: 3em;
+    margin: auto;
+    }
+
+
+
+header {
+    display: flex;
+    gap: 1em;
+    align-items: baseline;
+
+}
+input, select {
+background-color: var(--bg);
+color: white;
+border: 1px solid var(--rand);
+border-radius: 5px;
+}
+
+.check {
+    accent-color: var(--rand);
+
+}
+p {
+    width: 9em;
+    align-self: center;
+    
+}
+
+.checkmark {
+    display: grid;
+    grid-template: 1.8em / 50% 50%;
+    gap: 2em;
+    border: 1px solid var(--rand);
+    border-radius: 5px;
+    font-size: 85%;
+}
+
+.checkmark:hover {
+border: 1px solid white;
+}
+
+#output {
+    color: var(--detail);
+    border: 1px solid var(--rand);
+    font-size: 150%;
+    margin: 0.5em;
+    padding: 0.3em;
+    text-align: center;
+}
+
+
+
+:root {
+--bg: #000709;
+--fg: #011c1f;
+--rand: #d9af6b;
+--detail: #80dad5;
+font-family:  Arial;
+}
+
+
+
+/*mobile*/
+@media screen and (max-width: 720px) { 
+    
+
+header {
+    align-items: center;
+    flex-direction: column;
+    
+}
+h4 {
+    position: sticky;
+    
+}
+form {
+    
+    justify-content: center;
+
+}
+
+}

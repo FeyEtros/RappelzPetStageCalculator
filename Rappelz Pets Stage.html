@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta keywords="Rappelz Pet Upgrade Calculator Stage Kreaturen aufwerten Rechner">
+        <link rel="stylesheet" href="RappelzPetsStage.css">
+        <title>Pet Upgrade Calculator</title>
+    
+
+</head>
+
+<body>
+    <main>
+   <header> 
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Rappelz_logo.png" alt="Rappelz Logo">
+    <h1>Pet Upgrade Calculator</h1>
+    </header>
+    
+
+        <fieldset>
+            <form id="Rechner">
+                <select onchange="result()">
+                    <option value="Classic">Classic Pet</option>
+                    <option value="Seele">Soul Pet</option>
+                    <option value="Epic">Epic Pet</option>
+                </select>
+                
+
+                <label for="Pet1">1. Pet Lv</label>
+                <input id="Pet1" type="number" value="0" min="0" oninput="Pet1Value(), result()" >
+
+                <label for="Pet2">2. Pet Lv</label>
+                <input id="Pet2" type="number" value="0" min="0" oninput="Pet2Value(), result()" >
+
+                <label for="Stage">Stage</label>
+                <input id="Stage" type="number" min="1" max="5" value="1" oninput="StageValue(), result()">
+
+                <div>
+                <label for="Cat" class="checkmark ok"><p>Adv. Soul Catalyst</p>
+                <input class="check" name ="check" id="Cat" type="checkbox" onclick="addCat(), result()">
+                </label>
+                </div>
+
+               
+                <div>
+                <label for="Joker" class="checkmark Joker"><p>Joker</p>
+                <input class="check" name="check" id="Joker" type="checkbox" onclick="addJoker(), result()">
+                </label>
+                </div>
+
+                <br>
+                <div id="output"> output</div>
+
+                
+                
+            </form>
+        </fieldset>
+        <h4>Good luck!</h4>
+        <h4>By Togata (Server: Ifrit)</h4>
+    <script src="RappelzPetsStage.js"></script>
+ 
+</main>
+</body>
+
+
+
+</html>
