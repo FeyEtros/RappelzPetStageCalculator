@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta keywords="Rappelz Pet Staging Calculator Upgrade">
+        <link rel="stylesheet" href="RappelzPetsStage.css">
+        <title>Pet Upgrade Calculator</title>
+    
+
+</head>
+
+<body>
+    <main>
+   <header> 
+    <img src="https://upload.wikimedia.org/wikipedia/en/7/7d/Rappelz_logo.png" alt="Rappelz Logo">
+    <h1>Pet Upgrade Calculator</h1>
+    </header>
+    
+
+        <fieldset>
+            <form id="Rechner">
+                <select onchange="result(), StageValue()">
+                    <option value="Classic">Classic Pet</option>
+                    <option value="Seele">Soul Pet</option>
+                    <option value="Epic">Epic Pet</option>
+                </select>
+                
+
+                <label for="Pet1">1. Pet Level</label>
+                <input id="Pet1" type="number" value="1" min="1" max="300" oninput="Pet1Value(), result(), StageValue(), validity.valid||(value='')">
+
+                <label for="Pet2">2. Pet Level</label>
+                <input id="Pet2" type="number" value="1" min="1" max="300" oninput="Pet2Value(), result(), StageValue(), validity.valid||(value='')">
+
+                <label>Stage</label>
+                <select id="Stage" onchange="StageValue(), result()">
+                <option  value="1">1</option>
+                <option  value="2">2</option>
+                <option  value="3">3</option>
+                <option  value="4">4</option>
+                <option  value="5">5</option>
+                </select>
+
+                
+                <div class="checkdiv">
+                <label for="Cat" class="checkmark"><p>Adv. Soul Catalyst</p>
+                <input class="check" name ="check" id="Cat" type="checkbox" onclick="addCat(), result()">
+                </label>
+                </div>
+
+               
+                <div class="checkdiv">
+                <label for="Joker" class="checkmark"><p>Joker</p>
+                <input class="check" name="check" id="Joker" type="checkbox" onclick="addJoker(), result()">
+                </label>
+                </div>
+
+                <br>
+                <div id="output">output</div>
+
+                
+            <h4>Good luck!</h4>
+            <h5>By Togata </h5> 
+            <h5>(Server: Ifrit) </h5> 
+            </form>
+        </fieldset>
+        
+    <script src="RappelzPetsStage.js"></script>
+ 
+</main>
+</body>
+
+</html>
